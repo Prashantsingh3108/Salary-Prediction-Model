@@ -20,7 +20,7 @@ st.caption("Powered by Machine Learning (Random Forest Model)")
 # ==================================================
 @st.cache_resource
 def load_model():
-    bundle = joblib.load("salary_prediction_model.pkl")
+    bundle = joblib.load("salary_model.pkl")
     return bundle["best_model"], bundle["scalar"], bundle["feature_columns"]
 
 model, scaler, feature_columns = load_model()
@@ -133,3 +133,4 @@ if st.sidebar.button("🚀 Predict Salary"):
 # ==================================================
 st.markdown("---")
 st.caption("Created with ❤️ using Streamlit & Scikit-Learn")
+
